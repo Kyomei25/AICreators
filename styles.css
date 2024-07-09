@@ -20,12 +20,10 @@ header {
     z-index: 1000;
 }
 
-/* ナビゲーションメニューのスタイル */
 #navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
 }
 
 .menu-toggle {
@@ -50,7 +48,11 @@ header {
     margin-left: 1rem;
 }
 
-/* ヒーロー画像のスタイル */
+.nav-list li a {
+    text-decoration: none;
+    color: #333;
+}
+
 #hero {
     position: relative;
     width: 100%;
@@ -63,6 +65,50 @@ header {
     height: 100%;
     object-fit: cover;
 }
+
+.section-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 1;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #f8f8f8;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 0;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    #hero {
+        height: auto;
+    }
+
+    .hero-image {
+        height: auto;
+        max-height: 100vh;
+    }
+}
+
+/* 他のスタイルは変更なし */
 
 /* 「このようなお悩みはありませんか？」のスタイル */
 .problems-title {
