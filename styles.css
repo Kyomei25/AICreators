@@ -129,63 +129,6 @@ ul {
     margin-top: 1rem;
 }
 
-/* Additional styles for other sections... */
-
-@media (max-width: 1280px) {
-    .section-image,
-    .benefits-image {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
-}
-
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: flex;
-    }
-
-    .nav-list {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: #f8f8f8;
-    }
-
-    .nav-list.active {
-        display: flex;
-    }
-
-    .nav-list li {
-        margin: 0;
-        padding: 1rem;
-        text-align: center;
-    }
-
-    #hero {
-        height: auto;
-    }
-
-    .hero-image {
-        height: auto;
-        max-height: 100vh;
-    }
-
-    .cta-button {
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
-    }
-
-    /* Additional responsive styles... */
-}
-
-@media (max-width: 480px) {
-    /* Additional styles for smaller screens... */
-}
-
 #problems {
     text-align: center;
     padding: 2rem 1rem;
@@ -378,3 +321,61 @@ ul {
         padding: 8px;
     }
 }
+
+/* Additional styles for other sections... */
+
+@media (max-width: 1280px) {
+    .section-image,
+    .benefits-image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #f8f8f8;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 0;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    #hero {
+        height: auto;
+    }
+
+    .hero-image {
+        height: auto;
+        max-height: 100vh;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    /* Additional responsive styles... */
+}
+
+@media (max-width: 480px) {
+    /* Additional styles for smaller screens... */
+}
+
