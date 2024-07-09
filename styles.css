@@ -185,3 +185,196 @@ ul {
 @media (max-width: 480px) {
     /* Additional styles for smaller screens... */
 }
+
+#problems {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+#problems h2 {
+    margin-bottom: 2rem;
+}
+
+.speech-bubble {
+    position: relative;
+    background: #f0f0f0;
+    border-radius: 20px;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.speech-bubble:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -20px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-bottom-color: #f0f0f0;
+    border-top: 0;
+    margin-left: -10px;
+}
+
+.speech-bubble ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+.speech-bubble li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.speech-bubble li:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #007bff;
+}
+
+@media (max-width: 768px) {
+    .speech-bubble {
+        padding: 1.5rem;
+    }
+}
+
+.key-points {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.key-points ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.key-points li {
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.key-points li:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #007bff;
+    font-size: 1.5em;
+    line-height: 1;
+}
+
+.highlight-text {
+    background: linear-gradient(transparent 60%, #ffff00 60%);
+    padding: 2px 0;
+}
+
+@media (max-width: 768px) {
+    .key-points {
+        padding: 15px;
+    }
+
+    .key-points li {
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .key-points {
+        padding: 10px;
+    }
+
+    .key-points li {
+        padding-left: 15px;
+    }
+}
+.tanaka-message {
+    line-height: 1.8;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+.tanaka-message p {
+    margin-bottom: 15px;
+}
+
+.ai-usage-theory {
+    font-size: 1.3em;
+    color: red;
+    font-weight: bold;
+    margin: 20px 0;
+    display: inline-block;
+}
+
+.blue-text {
+    color: blue;
+    margin: 20px 0;
+    display: inline-block;
+}
+
+.reason-box {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.black-bold-underline {
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+    display: inline-block;
+    margin: 5px 0;
+}
+
+.red-bold-underline {
+    color: red;
+    font-weight: bold;
+    text-decoration: underline;
+    display: inline-block;
+    margin: 5px 0;
+}
+
+.black-bold {
+    color: black;
+    font-weight: bold;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .tanaka-message {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .ai-usage-theory {
+        font-size: 1.2em;
+    }
+
+    .reason-box {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tanaka-message {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .ai-usage-theory {
+        font-size: 1.1em;
+    }
+
+    .reason-box {
+        padding: 8px;
+    }
+}
