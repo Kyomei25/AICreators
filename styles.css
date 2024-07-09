@@ -63,7 +63,24 @@ header {
 .hero-image {
     width: 100%;
     height: auto;
-    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 767px) {
+    #hero {
+        height: auto;
+    }
+}
+
+@media (min-width: 768px) {
+    #hero {
+        height: 100vh;
+    }
+
+    .hero-image {
+        object-fit: cover;
+        height: 100%;
+    }
 }
 
 .section-image {

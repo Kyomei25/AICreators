@@ -28,7 +28,11 @@
 
     <main>
         <section id="hero">
-            <img src="hero-image.jpg" alt="AI CREATORSヒーロー画像" class="hero-image">
+            <picture>
+                <source media="(max-width: 767px)" srcset="hero-image-mobile.jpg">
+                <source media="(min-width: 768px)" srcset="hero-image-desktop.jpg">
+                <img src="hero-image-desktop.jpg" alt="AI CREATORS ヒーロー画像" class="hero-image">
+            </picture>
             <div class="cta-container">
                 <a href="#" class="cta-button">「AI CREATORS」に入会する</a>
             </div>
@@ -50,7 +54,7 @@
         </section>
 
         <section id="benefits">
-            <img src="benefits-image.png" alt="AI CREATORSの利点" class="benefits-image">
+            <img src="benefits-image.jpg" alt="AI CREATORSの利点" class="benefits-image">
             <div class="benefits-container">
                 <div class="benefit-item">
                     <p class="benefit-title">AIスキルを武器にすることで、あなたの人材価値が高まり、副業や本業での成果を残しやすくなる</p>
