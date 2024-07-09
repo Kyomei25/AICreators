@@ -20,6 +20,37 @@ header {
     z-index: 1000;
 }
 
+/* ナビゲーションメニューのスタイル */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 2px 0;
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-list li {
+    margin-left: 1rem;
+}
+
+/* ヒーロー画像のスタイル */
 #hero {
     position: relative;
     width: 100%;
@@ -33,17 +64,49 @@ header {
     object-fit: cover;
 }
 
-.hero-title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 4rem;
+/* 「このようなお悩みはありませんか？」のスタイル */
+.problems-title {
     text-align: center;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
+.break-on-mobile {
+    display: none;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #f8f8f8;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 0;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    #hero {
+        height: 50vh;
+    }
+
+    .break-on-mobile {
+        display: inline;
+    }
+}
 .cta-container {
     position: fixed;
     bottom: 0;
@@ -411,41 +474,91 @@ ol {
     margin-bottom: 40px; /* セクション間の余白 */
 }
 
-/* レスポンシブ対応 */
-@media (max-width: 1280px) {
-    .full-width-image {
-        width: 100%;
+/* ナビゲーションメニューのスタイル */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 2px 0;
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-list li {
+    margin-left: 1rem;
+}
+
+/* ヒーロー画像のスタイル */
+#hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 「このようなお悩みはありませんか？」のスタイル */
+.problems-title {
+    text-align: center;
+}
+
+.break-on-mobile {
+    display: none;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
         left: 0;
-        right: 0;
-        margin-left: 0;
-        margin-right: 0;
+        width: 100%;
+        background-color: #f8f8f8;
     }
-}
 
-@media (max-width: 768px) {
-    /* タブレットサイズの調整（必要に応じて） */
-}
-
-@media (max-width: 480px) {
-    /* スマートフォンサイズの調整（必要に応じて） */
-}
-
-/* メディアクエリ */
-@media (max-width: 1280px) {
-    .image-container {
-        padding: 15px;
+    .nav-list.active {
+        display: flex;
     }
-}
 
-@media (max-width: 768px) {
-    .image-container {
-        padding: 10px;
+    .nav-list li {
+        margin: 0;
+        padding: 1rem;
+        text-align: center;
     }
-}
 
-@media (max-width: 480px) {
-    .image-container {
-        padding: 5px;
+    #hero {
+        height: 50vh;
+    }
+
+    .break-on-mobile {
+        display: inline;
     }
 }
 
