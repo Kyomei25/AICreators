@@ -853,8 +853,10 @@ ul {
 }
 
 #ai-creators-intro {
+    
     width: 90%;
     max-width: 1200px;
+    align-items: center;
     padding: 20px;
     background-color: #f9f9f9;
     margin-bottom: 1em;
@@ -1123,6 +1125,10 @@ ul {
     }
 }
 
+
+
+
+
 #expectations {
     padding: 20px;
     background-color: #f9f9f9;
@@ -1143,6 +1149,46 @@ ul {
     background: #333;
     background-image: linear-gradient(to right, #ccc, #333, #ccc);
     margin: 10px 0;
+}
+
+#learning-environment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* または適切な最大幅 */
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.section-image,
+.additional-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.card {
+    width: 100%;
+    max-width: 800px; /* カードの最大幅を設定 */
+    margin-bottom: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f9f9f9; /* カードの背景色 */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 767px) {
+    #learning-environment {
+        padding: 10px;
+    }
+
+    .card {
+        padding: 15px;
+    }
 }
 
 #special-offers {
