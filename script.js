@@ -10,7 +10,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    function adjustHeroImage() {
+        const hero = document.getElementById('hero');
+        const img = hero.querySelector('.hero-image');
+        const windowRatio = window.innerWidth / window.innerHeight;
+        const imgRatio = img.naturalWidth / img.naturalHeight;
     
+        if (windowRatio > imgRatio) {
+            img.style.width = '100%';
+            img.style.height = 'auto';
+        } else {
+            img.style.width = 'auto';
+            img.style.height = '100%';
+        }
+    }
+    
+    window.addEventListener('load', adjustHeroImage);
+    window.addEventListener('resize', adjustHeroImage);
 
     // ハンバーガーメニューの動作
     const menuToggle = document.getElementById('menu-toggle');
@@ -42,25 +58,3 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 });
 
-let scrollPosition = 0;
-
-const scrollGallery = (direction) => {
-    const gallery = document.getElementById('scrollGallery');
-    const galleryWidth = gallery.offsetWidth;
-    const maxScroll = gallery.scrollWidth - galleryWidth;
-    const scrollAmount = galleryWidth / 3 * direction;
-
-    scrollPosition = Math.max(0, Math.min(maxScroll, scrollPosition + scrollAmount));
-    gallery.style.transform = `translateX(-${scrollPosition}px)`;
-}
-
-const openModal = (imgSrc) => {
-    const modal = document.getElementById('imageModal');
-    const modalImg = document.getElementById('modalImage');
-    modal.style.display = "block";
-    modalImg.src = imgSrc;
-}
-
-const closeModal = () => {
-    document.getElementById('imageModal').style.display = "none";
-}
