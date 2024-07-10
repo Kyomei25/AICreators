@@ -924,4 +924,115 @@ audio {
     text-decoration: underline;
 }
 
+body {
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, main, section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left; /* テキストを左寄せ */
+}
+
+.section-image, .additional-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left; /* テキストを左寄せ */
+}
+
+h4 {
+    color: #ff4500;
+    font-weight: bold;
+    text-align: left; /* テキストを左寄せ */
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+@media (max-width: 767px) {
+    .section-image, .additional-image {
+        width: 100%;
+    }
+
+    .card {
+        padding: 15px;
+        margin: 15px 0;
+    }
+}
+
+#expectations {
+    padding: 20px;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+    text-align: left; /* テキストを左寄せ */
+}
+
+.highlight-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: red;
+    text-align: center; /* 中央寄せ */
+}
+
+.section-divider {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+    margin: 10px 0;
+}
+
+#special-offers {
+    padding: 20px;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+    text-align: left; /* テキストを左寄せ */
+}
+
+#special-offers h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center; /* テキストを中央揃え */
+}
+
+#special-offers p {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+    #special-offers {
+        line-height: 1.4; /* スマホ用の行間 */
+    }
+}
+
+@media (min-width: 768px) {
+    #special-offers {
+        line-height: 1.8; /* パソコン用の行間 */
+    }
+}
 
