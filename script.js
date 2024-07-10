@@ -51,3 +51,14 @@ const scrollGallery = (direction) => {
     scrollPosition = Math.max(0, Math.min(maxScroll, scrollPosition + scrollAmount));
     gallery.style.transform = `translateX(-${scrollPosition}px)`;
 }
+
+const openModal = (imgSrc) => {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    modal.style.display = "block";
+    modalImg.src = imgSrc;
+}
+
+const closeModal = () => {
+    document.getElementById('imageModal').style.display = "none";
+}
