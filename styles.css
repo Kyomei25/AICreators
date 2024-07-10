@@ -629,6 +629,55 @@ ul {
     }
 }
 
+#web-skills-demand {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* カード間のスペース */
+  }
+
+  .card {
+    flex: 1 1 calc(33% - 20px); /* カードを均等に配置 */
+    border: 1px solid #ccc; /* カードの枠線 */
+    border-radius: 8px; /* 角を丸くする */
+    padding: 16px;
+    background-color: #f9f9f9; /* 背景色 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* カードの影 */
+  }
+
+  #web-skills-demand p, #web-skills-demand ul, #web-skills-demand div.image-placeholder {
+    line-height: 1.6; /* 行間を広げる */
+    margin-bottom: 1em; /* 各段落の間にスペースを作る */
+  }
+
+  #web-skills-demand .highlight-red {
+    color: red;
+  }
+
+  #web-skills-demand .bold-list {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  #web-skills-demand .bold-list li {
+    font-weight: bold;
+  }
+
+  @media (max-width: 767px) {
+    #web-skills-demand p, #web-skills-demand ul, #web-skills-demand div.image-placeholder {
+      line-height: 1.4; /* スマホ用の行間 */
+    }
+    
+    .card {
+      flex: 1 1 100%; /* スマホではカードを1列に表示 */
+    }
+  }
+
+  @media (min-width: 768px) {
+    #web-skills-demand p, #web-skills-demand ul, #web-skills-demand div.image-placeholder {
+      line-height: 1.8; /* パソコン用の行間 */
+    }
+  }
+
 #beginner-concerns .content {
     line-height: 1.8;
     margin-top: 20px;
@@ -676,3 +725,203 @@ ul {
         margin-bottom: 8px;
     }
 }
+
+#opportunity p {
+    line-height: 1.6; /* 行間を広げる */
+    margin-bottom: 1em; /* 各段落の間にスペースを作る */
+  }
+
+  @media (max-width: 767px) {
+    #opportunity p {
+      line-height: 1.4; /* スマホ用の行間 */
+    }
+  }
+
+  @media (min-width: 768px) {
+    #opportunity p {
+      line-height: 1.8; /* パソコン用の行間 */
+    }
+  }
+
+  #action-call p {
+    line-height: 1.6; /* 行間を広げる */
+    margin-bottom: 1em; /* 各段落の間にスペースを作る */
+  }
+
+  #action-call .highlight-red {
+    color: red;
+  }
+
+  @media (max-width: 767px) {
+    #action-call p {
+      line-height: 1.4; /* スマホ用の行間 */
+    }
+  }
+
+  @media (min-width: 768px) {
+    #action-call p {
+      line-height: 1.8; /* パソコン用の行間 */
+    }
+  }
+
+  .highlighted-text {
+    font-weight: bold;
+    color: black;
+    background-color: yellow;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* 文字を中央配置 */
+}
+
+#ai-creators-intro {
+    width: 90%;
+    max-width: 1200px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin-bottom: 1em;
+    text-align: center; /* 文字を中央配置 */
+}
+
+.gallery-container,
+.video-gallery,
+.image-pair {
+    justify-content: center; /* コンテナ内の要素を中央配置 */
+}
+
+
+.additional-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; /* 文字を中央配置 */
+}
+
+.gallery-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.scroll-gallery {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.lecture-image {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    aspect-ratio: 1 / 1; /* 画像を1:1の比率にする */
+    object-fit: cover;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.arrow-left {
+    left: 0;
+}
+
+.arrow-right {
+    right: 0;
+}
+
+.video-gallery {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.video-gallery video {
+    width: 200px; /* 動画の幅を200pxに設定 */
+    height: 200px; /* 動画の高さを200pxに設定し、1:1の比率にする */
+    flex: 0 0 auto;
+    object-fit: cover; /* 画像のようにカバー */
+}
+
+.image-pair {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.image-container {
+    text-align: center; /* ボタンを中央揃え */
+}
+
+.image-container img {
+    max-width: 100%; /* 画像をコンテナの幅に合わせる */
+    height: auto; /* 元の比率を保つ */
+}
+
+.link-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.link-button:hover {
+    background-color: #0056b3;
+}
+
+audio {
+    display: block;
+    margin: 10px 0;
+}
+
+@media (max-width: 767px) {
+    #ai-creators-intro {
+        line-height: 1.4;
+    }
+
+    .lecture-image,
+    .video-gallery video,
+    .image-pair img {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    #ai-creators-intro {
+        line-height: 1.8;
+    }
+}
+
+.highlight-red {
+    color: red;
+}
+
+.highlight-bold {
+    font-weight: bold;
+}
+
+.highlight-underline {
+    text-decoration: underline;
+}
+
+

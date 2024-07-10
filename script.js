@@ -39,3 +39,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 });
+
+let scrollPosition = 0;
+
+const scrollGallery = (direction) => {
+    const gallery = document.getElementById('scrollGallery');
+    const galleryWidth = gallery.offsetWidth;
+    const maxScroll = gallery.scrollWidth - galleryWidth;
+    const scrollAmount = galleryWidth / 3 * direction;
+
+    scrollPosition = Math.max(0, Math.min(maxScroll, scrollPosition + scrollAmount));
+    gallery.style.transform = `translateX(-${scrollPosition}px)`;
+}
