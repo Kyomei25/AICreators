@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // アコーディオンの動作
-    const accordionItems = document.querySelectorAll('.accordion-item h3');
-    accordionItems.forEach(item => {
+    const accordionItem = document.querySelectorAll('.accordion-item h3');
+    accordionItem.forEach(item => {
         item.addEventListener('click', () => {
             const content = item.nextElementSibling;
             content.style.display = content.style.display === 'block' ? 'none' : 'block';
@@ -51,3 +51,4 @@ const scrollGallery = (direction) => {
     scrollPosition = Math.max(0, Math.min(maxScroll, scrollPosition + scrollAmount));
     gallery.style.transform = `translateX(-${scrollPosition}px)`;
 }
+
