@@ -56,7 +56,6 @@ header {
 #hero {
     position: relative;
     width: 100%;
-    height: auto;
     overflow: hidden;
 }
 
@@ -66,8 +65,19 @@ header {
     display: block;
 }
 
+.section-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 @media (max-width: 767px) {
     #hero {
+        height: auto;
+    }
+
+    .hero-image {
+        width: 100%;
         height: auto;
     }
 }
@@ -78,27 +88,8 @@ header {
     }
 
     .hero-image {
-        object-fit: cover;
+        width: 100%;
         height: 100%;
-    }
-}
-
-.section-image {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-@media (max-width: 767px) {
-    .section-image {
-        aspect-ratio: 16 / 9; /* モバイル用のアスペクト比を設定 */
-        object-fit: cover;
-    }
-}
-
-@media (min-width: 768px) {
-    .section-image {
-        aspect-ratio: 4 / 1; /* デスクトップ用のアスペクト比を設定 */
         object-fit: cover;
     }
 }
@@ -205,6 +196,7 @@ ul {
 #problems h2 {
     margin-bottom: 2rem;
 }
+
 .speech-bubble {
     position: relative;
     background: #f0f0f0;
@@ -304,6 +296,7 @@ ul {
         padding-left: 15px;
     }
 }
+
 .tanaka-message {
     line-height: 1.8;
     margin-bottom: 30px;
@@ -389,17 +382,6 @@ ul {
     }
 }
 
-/* Additional styles for other sections... */
-
-@media (max-width: 1280px) {
-    .section-image,
-    .benefits-image {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
-}
-
 @media (max-width: 768px) {
     .menu-toggle {
         display: flex;
@@ -425,24 +407,8 @@ ul {
         text-align: center;
     }
 
-    #hero {
-        height: auto;
-    }
-
-    .hero-image {
-        height: auto;
-        max-height: 100vh;
-    }
-
     .cta-button {
         font-size: 1rem;
         padding: 0.5rem 1rem;
     }
-
-    /* Additional responsive styles... */
 }
-
-@media (max-width: 480px) {
-    /* Additional styles for smaller screens... */
-}
-
