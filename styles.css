@@ -394,6 +394,8 @@ ul {
         display: flex;
     }
 
+    
+
     .nav-list {
         display: none;
         flex-direction: column;
@@ -417,5 +419,260 @@ ul {
     .cta-button {
         font-size: 1rem;
         padding: 0.5rem 1rem;
+    }
+}
+
+.ai-revolution {
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.ai-revolution p {
+    margin-bottom: 20px;
+}
+
+.ai-revolution ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.ai-revolution .highlight-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.ai-revolution .highlight-list li {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    padding: 5px 10px 5px 20px;
+    position: relative;
+}
+
+.ai-revolution .highlight-list li::before {
+    content: '・';
+    position: absolute;
+    left: 5px;
+}
+
+.ai-revolution .highlight-list li strong {
+    background: linear-gradient(transparent 60%, yellow 60%);
+    display: inline;
+    padding: 2px 0;
+}
+
+.ai-revolution .underline {
+    text-decoration: underline;
+    padding-bottom: 2px;
+}
+
+.ai-revolution .highlight-yellow {
+    background: yellow;
+    padding: 2px 5px;
+}
+
+.case-study-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.case-study-card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.blue-text {
+    color: blue;
+}
+
+@media (max-width: 768px) {
+    .ai-revolution {
+        font-size: 16px;
+    }
+
+    .ai-revolution p {
+        margin-bottom: 15px;
+    }
+
+    .ai-revolution ul {
+        padding-left: 15px;
+    }
+
+    .ai-revolution .highlight-list li {
+        margin-bottom: 8px;
+        padding: 4px 8px 4px 18px;
+    }
+
+    .ai-revolution .highlight-list li::before {
+        left: 4px;
+    }
+
+    .case-study-card {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .case-study-card h3 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ai-revolution {
+        font-size: 14px;
+    }
+
+    .ai-revolution p {
+        margin-bottom: 12px;
+    }
+
+    .ai-revolution ul {
+        padding-left: 10px;
+    }
+
+    .ai-revolution .highlight-list li {
+        margin-bottom: 6px;
+        padding: 3px 6px 3px 16px;
+    }
+
+    .ai-revolution .highlight-list li::before {
+        left: 3px;
+    }
+
+    .case-study-card {
+        padding: 12px;
+        margin-bottom: 15px;
+    }
+
+    .case-study-card h3 {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+}
+
+.web-skills {
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.web-skills p {
+    margin-bottom: 20px;
+}
+
+.skill-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.skill-list li {
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.skill-list li::before {
+    content: '・';
+    position: absolute;
+    left: 0;
+    color: #007bff;
+}
+
+.highlight-red {
+    color: red;
+    font-weight: bold;
+}
+
+.blue-text {
+    color: blue;
+    font-style: italic;
+}
+
+.image-placeholder {
+    background-color: #f0f0f0;
+    border: 1px dashed #ccc;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .web-skills {
+        font-size: 16px;
+    }
+
+    .web-skills p {
+        margin-bottom: 15px;
+    }
+
+    .skill-list li {
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .web-skills {
+        font-size: 14px;
+    }
+
+    .web-skills p {
+        margin-bottom: 12px;
+    }
+
+    .skill-list li {
+        margin-bottom: 6px;
+    }
+}
+
+#beginner-concerns .content {
+    line-height: 1.8;
+    margin-top: 20px;
+}
+
+#beginner-concerns p {
+    margin-bottom: 15px;
+}
+
+#beginner-concerns .highlight-red {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+#beginner-concerns .bold-list {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 15px;
+}
+
+#beginner-concerns .bold-list li {
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+#beginner-concerns .bold-list li::before {
+    content: '・';
+    position: absolute;
+    left: 0;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    #beginner-concerns .content {
+        font-size: 14px;
+    }
+
+    #beginner-concerns p {
+        margin-bottom: 12px;
+    }
+
+    #beginner-concerns .bold-list li {
+        margin-bottom: 8px;
     }
 }
