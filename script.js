@@ -10,6 +10,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    function adjustHeroImage() {
+        const hero = document.getElementById('hero');
+        const img = hero.querySelector('.hero-image');
+        const windowRatio = window.innerWidth / window.innerHeight;
+        const imgRatio = img.naturalWidth / img.naturalHeight;
+    
+        if (windowRatio > imgRatio) {
+            img.style.width = '100%';
+            img.style.height = 'auto';
+        } else {
+            img.style.width = 'auto';
+            img.style.height = '100%';
+        }
+    }
+    
+    window.addEventListener('load', adjustHeroImage);
+    window.addEventListener('resize', adjustHeroImage);
+
     // ハンバーガーメニューの動作
     const menuToggle = document.getElementById('menu-toggle');
     const navList = document.getElementById('nav-list');
