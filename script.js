@@ -52,7 +52,25 @@ const scrollGallery = (direction) => {
     gallery.style.transform = `translateX(-${scrollPosition}px)`;
 }
 
-<script>
+const openModal = (src) => {
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    modal.style.display = "block";
+    modalImage.src = src;
+}
+
+const closeModal = () => {
+    const modal = document.getElementById('imageModal');
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    const modal = document.getElementById('imageModal');
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
 document.querySelector('.cta-button').addEventListener('click', function(e) {
     e.preventDefault();
     document.querySelector('#pricing').scrollIntoView({

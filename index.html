@@ -359,20 +359,27 @@
             <div class="card">
                 <p>という仕事には欠かせないAIスキルを一緒に学ぶ場を作りました！</p>
                 <p>例えばAIで思いのままの画像を作ったり</p>
-    
+            
                 <div class="gallery-container">
                     <button class="arrow arrow-left" onclick="scrollGallery(-1)">&#9664;</button>
                     <div class="scroll-gallery" id="scrollGallery">
-                        <img src="lecture-image-1.png" alt="講義動画スクショ" class="lecture-image">
-                        <img src="lecture-image-2.png" alt="講義動画スクショ" class="lecture-image">
-                        <img src="lecture-image-3.png" alt="講義動画スクショ" class="lecture-image">
-                        <img src="lecture-image-4.png" alt="講義動画スクショ" class="lecture-image">
-                        <img src="lecture-image-5.jpg" alt="講義動画スクショ" class="lecture-image">
-                        <img src="lecture-image-6.jpg" alt="講義動画スクショ" class="lecture-image">
+                        <img src="lecture-image-1.png" alt="講義動画スクショ" class="lecture-image" onclick="openModal(this.src)">
+                        <img src="lecture-image-2.png" alt="講義動画スクショ" class="lecture-image" onclick="openModal(this.src)">
+                        <img src="lecture-image-3.png" alt="講義動画スクショ" class="lecture-image" onclick="openModal(this.src)">
+                        <img src="lecture-image-4.png" alt="講義動画スクショ" class="lecture-image" onclick="openModal(this.src)">
+                        <img src="lecture-image-5.jpg" alt="講義動画スクショ" class="lecture-image" onclick="openModal(this.src)">
+                        <img src="lecture-image-6.jpg" alt="講義動画スクショ" class="lecture-image" onclick="openModal(this.src)">
                     </div>
                     <button class="arrow arrow-right" onclick="scrollGallery(1)">&#9654;</button>
                 </div>
             </div>
+            
+            <!-- Modal for Image Zoom -->
+            <div id="imageModal" class="modal">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img class="modal-content" id="modalImage">
+            </div>
+            
     
             <div class="card">
                 <p>作った画像をAIで喋らせて、SNSでPR。</p>
