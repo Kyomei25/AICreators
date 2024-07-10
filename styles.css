@@ -643,26 +643,26 @@ ul {
 }
 
 .image-placeholder {
-    background-color: #f0f0f0;
-    border: 1px dashed #ccc;
-    padding: 20px;
-    text-align: center;
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* 画像同士の間隔を狭くする */
+    flex-wrap: wrap; /* 画面幅に合わせて折り返す */
 }
 
-@media (max-width: 768px) {
-    .web-skills {
-        font-size: 16px;
-    }
+.additional-image {
+    max-width: 48%; /* 画面幅の半分以下に設定して、2つの画像が並ぶようにする */
+    height: auto;
+    margin: 0;
+}
 
-    .web-skills p {
-        margin-bottom: 15px;
-    }
-
-    .skill-list li {
-        margin-bottom: 8px;
+@media (max-width: 767px) {
+    .additional-image {
+        max-width: 100%; /* スマホでは1列に表示 */
+        margin-bottom: 10px; /* 画像間の間隔を調整 */
     }
 }
+
 
 @media (max-width: 480px) {
     .web-skills {
@@ -727,6 +727,28 @@ ul {
 .link-button:hover {
     background-color: #0056b3;
 }
+
+.image-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* 画像同士の間隔を狭くする */
+    flex-wrap: wrap; /* 画面幅に合わせて折り返す */
+}
+
+.additional-image {
+    max-width: 48%; /* 画面幅の半分以下に設定して、2つの画像が並ぶようにする */
+    height: auto;
+    margin: 0;
+}
+
+@media (max-width: 767px) {
+    .additional-image {
+        max-width: 100%; /* スマホでは1列に表示 */
+        margin-bottom: 10px; /* 画像間の間隔を調整 */
+    }
+}
+
 
 @media (max-width: 767px) {
     .card {
