@@ -126,7 +126,7 @@ p, ul, a {
 
     .hero-image {
         width: 100vw; /* 画面全体の幅に合わせる */
-        height: 100vh; /* 画面全体の高さに合わせる */
+        height: auto; /* 画面全体の高さに合わせる */
         object-fit: cover; /* 画像を縦横比を保ちながら切り取る */
     }
 }
@@ -141,8 +141,6 @@ p, ul, a {
         height: auto;
     }
 }
-
-
 
 .section-image {
     width: 100%;
