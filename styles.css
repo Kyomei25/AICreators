@@ -185,6 +185,17 @@ ul {
     color: #666;
 }
 
+@media (max-width: 1200px) {
+    .benefit-item {
+        width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 768px) {
+    .benefit-item {
+        width: calc(100% - 40px);
+    }
+}
 
 #problems {
     text-align: center;
