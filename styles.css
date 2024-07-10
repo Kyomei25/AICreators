@@ -86,8 +86,21 @@ header {
 .section-image {
     width: 100%;
     height: auto;
-    aspect-ratio: 4 / 1;
-    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 767px) {
+    .section-image {
+        aspect-ratio: 16 / 9; /* モバイル用のアスペクト比を設定 */
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 768px) {
+    .section-image {
+        aspect-ratio: 4 / 1; /* デスクトップ用のアスペクト比を設定 */
+        object-fit: cover;
+    }
 }
 
 main {
@@ -172,17 +185,6 @@ ul {
     color: #666;
 }
 
-@media (max-width: 1200px) {
-    .benefit-item {
-        width: calc(50% - 40px);
-    }
-}
-
-@media (max-width: 768px) {
-    .benefit-item {
-        width: calc(100% - 40px);
-    }
-}
 
 #problems {
     text-align: center;
