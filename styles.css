@@ -128,6 +128,7 @@ p, ul, a {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: center; /* 画像の中心を表示 */
     }
   }
   
@@ -138,7 +139,8 @@ p, ul, a {
   
     .hero-image {
       width: 100%;
-      height: auto;
+      height: 100%; /* auto から 100% に変更 */
+      object-fit: cover; /* cover を追加 */
     }
   }
 
