@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // アコーディオンの動作
-    const accordionItem = document.querySelectorAll('.accordion-item h3');
-    accordionItem.forEach(item => {
+    const accordionItems = document.querySelectorAll('.accordion-item h3');
+    accordionItems.forEach(item => {
         item.addEventListener('click', () => {
             const content = item.nextElementSibling;
             content.style.display = content.style.display === 'block' ? 'none' : 'block';
@@ -51,30 +51,3 @@ const scrollGallery = (direction) => {
     scrollPosition = Math.max(0, Math.min(maxScroll, scrollPosition + scrollAmount));
     gallery.style.transform = `translateX(-${scrollPosition}px)`;
 }
-
-const openModal = (src) => {
-    const modal = document.getElementById('imageModal');
-    const modalImage = document.getElementById('modalImage');
-    modal.style.display = "block";
-    modalImage.src = src;
-}
-
-const closeModal = () => {
-    const modal = document.getElementById('imageModal');
-    modal.style.display = "none";
-}
-
-window.onclick = function(event) {
-    const modal = document.getElementById('imageModal');
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
-document.querySelector('.cta-button').addEventListener('click', function(e) {
-    e.preventDefault();
-    document.querySelector('#pricing').scrollIntoView({
-        behavior: 'smooth'
-    });
-});
-</script>
