@@ -42,3 +42,26 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 });
 
+let currentIndex = 0;
+const items = document.querySelectorAll('.carousel-item');
+const totalItems = items.length;
+
+function moveCarousel(direction) {
+    currentIndex = (currentIndex + direction + totalItems) % totalItems;
+    updateCarousel();
+}
+
+function updateCarousel() {
+    const carousel = document.getElementById('imageCarousel');
+    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+// オプション: 自動スライド
+setInterval(() => moveCarousel(1), 5000);
+
+// モーダル機能を維持する場合
+items.forEach(item => {
+    item.addEventListener('click', function() {
+        openModal(this.src);
+    });
+});
