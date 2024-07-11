@@ -129,6 +129,13 @@ p, ul, a {
     }
 }
 
+@media (min-width: 768px) {
+    #hero {
+        height: calc(100vh - 60px); /* ナビゲーションバーの高さを引く */
+        margin-top: 60px; /* ナビゲーションバーの高さ分のマージンを追加 */
+    }
+}
+
 .section-image {
     width: 100%;
     height: auto;
