@@ -239,10 +239,86 @@ ul {
 #problems {
     text-align: center;
     padding: 2rem 1rem;
+    background-color: #f0f8ff;
 }
 
-#problems h2 {
+.problems-title {
+    font-size: 1.8rem;
     margin-bottom: 2rem;
+    line-height: 1.4;
+}
+
+.normal-text {
+    color: black;
+    font-weight: normal;
+}
+
+.highlight-blue {
+    color: #164a84;
+    font-weight: bold;
+    font-size: 2.2rem;
+}
+
+.highlight {
+    font-weight: bold;
+    background: linear-gradient(transparent 60%, #ffff00 60%);
+}
+
+.problem-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.problem-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 1rem);
+    min-width: 250px;
+    text-align: left;
+    position: relative;
+    padding-left: 3rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    min-height: 80px;
+}
+
+.problem-number {
+    position: absolute;
+    left: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ff69b4;
+    color: white;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.problem-content {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .problem-card {
+        width: 100%;
+    }
+    
+    .problems-title {
+        font-size: 1.5rem;
+    }
+    
+    .highlight-blue {
+        font-size: 1.8rem;
+    }
 }
 
 .speech-bubble {
