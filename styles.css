@@ -92,37 +92,113 @@ p, ul, a {
     }
   }
 
-#navbar {
+  #navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    padding: 10px 0;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; /* または実際の高さに合わせて調整 */
+    z-index: 1001;
 }
 
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.menu-toggle span {
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    margin: 2px 0;
+body {
+    padding-top: 60px; /* ナビゲーションバーの高さと同じ */
 }
 
 .nav-list {
     display: flex;
     list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-list li {
-    margin-left: 1rem;
+    margin: 0 15px;
+    text-align: center;
 }
 
 .nav-list li a {
     text-decoration: none;
     color: #333;
+    font-size: 12px;
+    font-weight: bold;
+    display: block;
+    padding: 5px 0;
+}
+
+.nav-list li .subtitle {
+    display: block;
+    font-size: 10px;
+    color: #999;
+    text-transform: uppercase;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    #navbar {
+        justify-content: flex-start;
+        padding: 10px;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 60px; /* ナビゲーションバーの高さに合わせて調整 */
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        overflow-y: auto;
+        z-index: 1000;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 0;
+        text-align: left;
+        border-bottom: 1px solid #eee;
+    }
+
+    .nav-list li a {
+        padding: 15px 20px;
+        display: block;
+    }
+
+    .nav-list li .subtitle {
+        display: inline;
+        margin-left: 10px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .menu-toggle span {
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        margin: 2px 0;
+    }
+}
+
+body.menu-open {
+    overflow: hidden;
 }
 
 #hero {
@@ -149,7 +225,25 @@ p, ul, a {
 
 @media (max-width: 767px) {
     #hero {
-        height: 100vh;
+        height: auto; /* 高さを自動に設定 */
+        padding-top: 56.25%; /* 16:9のアスペクト比を維持 */
+        min-height: 100vh; /* 最小高さを画面の高さに設定 */
+    }
+
+    #hero picture {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .hero-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -961,14 +1055,14 @@ ul {
 }
 
 #ai-creators-intro {
-    
-    width: 90%;
-    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    width: 100%;
+    max-width: 1200px; /* または適切な最大幅 */
+    margin: 0 auto;
     padding: 20px;
-    background-color: #f9f9f9;
-    margin-bottom: 1em;
-    text-align: center; /* 文字を中央配置 */
+    box-sizing: border-box;
 }
 
 
@@ -986,14 +1080,22 @@ ul {
 }
 
 .card {
-    background: #fff;
-    border-radius: 8px;
-    padding: 20px;
+    width: 100%;
+    max-width: 800px; /* カードの最大幅を設定 */
     margin: 20px 0;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center; /* 文字を中央配置 */
 }
-
+/* レスポンシブデザイン用 */
+@media (max-width: 767px) {
+    .card {
+        width: 95%;
+        padding: 15px;
+    }
+}
 /* カルーセル */
 
 .carousel-container {
@@ -1127,15 +1229,39 @@ ul {
 
 .video-gallery {
     display: flex;
-    gap: 10px;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 20px;
 }
 
-.video-gallery video {
-    width: 200px; /* 動画の幅を200pxに設定 */
-    height: 200px; /* 動画の高さを200pxに設定し、1:1の比率にする */
-    flex: 0 0 auto;
-    object-fit: cover; /* 画像のようにカバー */
+.youtube-shorts-container {
+    width: 100%;
+    max-width: 315px;
+    aspect-ratio: 9 / 16;
+    position: relative;
+}
+
+.youtube-video-container {
+    width: 100%;
+    max-width: 560px;
+    aspect-ratio: 16 / 9;
+    position: relative;
+}
+
+.youtube-shorts-container iframe,
+.youtube-video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 767px) {
+    .youtube-shorts-container,
+    .youtube-video-container {
+        width: 100%;
+    }
 }
 
 @media (max-width: 767px) {
@@ -1372,6 +1498,21 @@ ul {
     }
 }
 
+@keyframes shiny {
+    0% {
+        transform: scale(0) rotate(25deg);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1) rotate(25deg);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(50) rotate(25deg);
+        opacity: 0;
+    }
+}
+
 #cta {
     text-align: center;
     padding: 20px;
@@ -1384,20 +1525,34 @@ ul {
 }
 
 .cta-button {
+    position: relative;
     display: inline-block;
-    padding: 15px 30px;
-    background-color: #007bff;
+    padding: 20px 40px;
+    background-color: #05AC47;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.5em;
-    margin: 10px 0;
+    border-radius: 50px;
+    font-size: 1.8em;
+    margin: 20px 0;
     text-align: center;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    overflow: hidden;
 }
 
 .cta-button:hover {
-    background-color: #dc143c;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(5, 172, 71, 0.3);
+}
+
+.cta-button::after {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 50px;
+    height: 50px;
+    background-image: linear-gradient(100deg, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 0) 0%);
+    animation: shiny 3s ease-in-out infinite;
 }
 
 @media (max-width: 767px) {
@@ -1406,8 +1561,8 @@ ul {
     }
 
     .cta-button {
-        padding: 12px 25px;
-        font-size: 1.2em;
+        padding: 15px 30px;
+        font-size: 1.4em;
     }
 }
 
